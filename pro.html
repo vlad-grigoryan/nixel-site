@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nixel Pro</title>
+<meta name="description" content="What Nixel Pro adds: bulk and image redaction, team policy, a share-safe log and your own rules. Finding and hiding stays free." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' rx='229' fill='%232ED88A'/%3E%3Crect x='256' y='446' width='512' height='133' rx='66' fill='%23FCFDFD'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    color-scheme: light dark;
+    --page:#fdfdfe; --card:#fff; --inset:#f7f8f8; --text:#34373d; --muted:#7c8189;
+    --hair:#e8e9eb; --green:#22c782;
+    --font:-apple-system,"SF Pro Text",system-ui,"Helvetica Neue",Helvetica,sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --page:#1b1d21; --card:#22252a; --inset:#1b1e22; --text:#e9eaec;
+            --muted:#9a9ea5; --hair:#383c42; --green:#2ed88a; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--page); color:var(--text); font-family:var(--font);
+    -webkit-font-smoothing:antialiased; line-height:1.6;
+  }
+  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
+  header { padding:72px 0 8px; display:flex; align-items:center; gap:12px; }
+  header svg { width:38px; height:38px; display:block; }
+  header b { font-size:20px; font-weight:600; letter-spacing:-.018em; }
+  header a { margin-left:auto; font-size:14.5px; color:var(--muted); text-decoration:none; }
+  h1 { font-size:38px; line-height:1.15; font-weight:600; letter-spacing:-.028em;
+       margin:28px 0 16px; text-wrap:balance; }
+  .lede { font-size:18px; color:var(--muted); margin:0 0 8px; text-wrap:pretty; }
+  h2 { font-size:20px; font-weight:600; letter-spacing:-.018em; margin:52px 0 14px; }
+  p, li { font-size:15.5px; }
+  a { color:var(--text); text-underline-offset:3px; }
+  .promise {
+    margin:28px 0 0; padding:18px 20px; border-radius:16px; background:var(--inset);
+    font-size:15.5px;
+  }
+  .promise b { font-weight:600; }
+  .list { margin:36px 0 0; }
+  .row { padding:18px 0; border-top:1px solid var(--hair); }
+  .row:last-child { border-bottom:1px solid var(--hair); }
+  .row b { display:block; font-size:16px; font-weight:600; letter-spacing:-.01em; }
+  .row span { display:block; margin-top:3px; font-size:15px; color:var(--muted); }
+  .status {
+    margin:40px 0 0; padding:22px 24px; border-radius:18px;
+    border:1px solid var(--hair); background:var(--card);
+  }
+  .status b { display:block; font-size:16px; font-weight:600; margin-bottom:6px; }
+  .status p { margin:0 0 18px; color:var(--muted); }
+  .cta {
+    display:inline-block; padding:13px 24px; border-radius:999px; background:var(--green);
+    color:#fff; font-weight:600; font-size:15px; text-decoration:none;
+  }
+  footer { margin:72px 0 56px; padding-top:24px; border-top:1px solid var(--hair);
+           font-size:14px; color:var(--muted); }
+  footer a { color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg viewBox="0 0 1024 1024" aria-hidden="true">
+      <rect width="1024" height="1024" rx="229" fill="#2ED88A"/>
+      <rect x="256" y="446" width="512" height="133" rx="66" fill="#FCFDFD"/>
+    </svg>
+    <b>Nixel</b>
+    <a href="/">Back to Nixel</a>
+  </header>
+
+  <h1>Pro</h1>
+  <p class="lede">For doing this at scale, and proving you did.</p>
+
+  <div class="promise">
+    <b>Finding and hiding stays free.</b> Every kind, on every site, including the
+    on-device model. Pro never buys protection, and nothing here makes the free
+    version less safe. If it did, it would belong in the free version.
+  </div>
+
+  <div class="list">
+    <div class="row">
+      <b>Bulk and image redaction</b>
+      <span>Many screenshots at once, and text baked into images.</span>
+    </div>
+    <div class="row">
+      <b>Team policy</b>
+      <span>Set the defaults once and push them to everyone.</span>
+    </div>
+    <div class="row">
+      <b>Share-safe log</b>
+      <span>What was hidden, where and when. Counts only, never values.</span>
+    </div>
+    <div class="row">
+      <b>Your own rules</b>
+      <span>Custom patterns for formats only your company uses.</span>
+    </div>
+  </div>
+
+  <div class="status">
+    <b>Not available yet</b>
+    <p>
+      Nixel is free today and none of the above is built. We would rather find
+      out which of these you actually need before building the wrong one, so if
+      any of it would be useful to you, say so and say which.
+    </p>
+    <a class="cta" href="mailto:support@nixel.org?subject=Nixel%20Pro&body=Which%20of%20these%20would%20you%20use%3F%0A%0A-%20Bulk%20and%20image%20redaction%0A-%20Team%20policy%0A-%20Share-safe%20log%0A-%20Your%20own%20rules%0A%0AAnything%20else%3A">Tell us what you need</a>
+  </div>
+
+  <h2>Why not charge for the AI?</h2>
+  <p>
+    Because the model is what finds names, addresses and organisations, and that
+    is protection. Charging for it would mean free users are less covered, in a
+    product whose only job is to cover you. It also happens to be the least
+    predictable part of the product, and selling the least predictable part is a
+    poor way to earn trust.
+  </p>
+
+  <footer>
+    Nixel is made by SD Software LLC, Armenia.<br />
+    <a href="/">Home</a> · <a href="/#privacy">Privacy</a> · <a href="mailto:support@nixel.org">Contact</a>
+  </footer>
+
+</div>
+</body>
+</html>
