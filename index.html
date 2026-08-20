@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nixel — hide what shouldn't be shared</title>
+<meta name="description" content="Nixel finds passwords, API keys, card numbers and personal details on any page and hides them before you share your screen. Everything runs on your own device." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' rx='229' fill='%232ED88A'/%3E%3Crect x='256' y='446' width='512' height='133' rx='66' fill='%23FCFDFD'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    color-scheme: light dark;
+    --page:#fdfdfe; --card:#fff; --inset:#f7f8f8; --text:#34373d; --muted:#7c8189;
+    --hair:#e8e9eb; --green:#22c782; --mask:#3a3d44;
+    --font:-apple-system,"SF Pro Text",system-ui,"Helvetica Neue",Helvetica,sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --page:#1b1d21; --card:#22252a; --inset:#1b1e22; --text:#e9eaec;
+            --muted:#9a9ea5; --hair:#383c42; --green:#2ed88a; --mask:#d9dbde; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--page); color:var(--text); font-family:var(--font);
+    -webkit-font-smoothing:antialiased; line-height:1.6;
+  }
+  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
+  header { padding:72px 0 8px; display:flex; align-items:center; gap:12px; }
+  header svg { width:38px; height:38px; display:block; }
+  header b { font-size:20px; font-weight:600; letter-spacing:-.018em; }
+  h1 { font-size:38px; line-height:1.15; font-weight:600; letter-spacing:-.028em;
+       margin:28px 0 16px; text-wrap:balance; }
+  .lede { font-size:18px; color:var(--muted); margin:0 0 32px; text-wrap:pretty; }
+  h2 { font-size:20px; font-weight:600; letter-spacing:-.018em; margin:52px 0 14px; }
+  h3 { font-size:15px; font-weight:600; margin:26px 0 6px; }
+  p, li { font-size:15.5px; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  a { color:var(--text); text-underline-offset:3px; }
+  .cta {
+    display:inline-block; padding:13px 24px; border-radius:999px; background:var(--green);
+    color:#fff; font-weight:600; font-size:15px; text-decoration:none;
+  }
+  .quiet { font-size:14px; color:var(--muted); }
+  .demo {
+    padding:20px 22px; border-radius:16px; background:var(--inset); font-size:15.5px;
+    line-height:2.1; margin:8px 0 4px;
+  }
+  .m { position:relative; display:inline-block; }
+  .m i { position:absolute; left:0; right:0; top:50%; height:1.35em;
+         transform:translateY(-50%); border-radius:4px; background:var(--mask); }
+  .card {
+    border:1px solid var(--hair); border-radius:16px; padding:20px 22px; margin:16px 0;
+    background:var(--card);
+  }
+  .card b { display:block; font-size:15px; font-weight:600; margin-bottom:2px; }
+  .card span { font-size:14.5px; color:var(--muted); }
+  footer { margin:72px 0 56px; padding-top:24px; border-top:1px solid var(--hair);
+           font-size:14px; color:var(--muted); }
+  footer a { color:var(--muted); }
+  hr { border:0; border-top:1px solid var(--hair); margin:52px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg viewBox="0 0 1024 1024" aria-hidden="true">
+      <rect width="1024" height="1024" rx="229" fill="#2ED88A"/>
+      <rect x="256" y="446" width="512" height="133" rx="66" fill="#FCFDFD"/>
+    </svg>
+    <b>Nixel</b>
+  </header>
+
+  <h1>Hide what shouldn't be shared — before you share it.</h1>
+  <p class="lede">
+    Nixel finds API keys, passwords, card numbers, emails and personal details on
+    any page and covers them up. Then you screen-share, screenshot or record
+    without thinking about it.
+  </p>
+
+  <p><a class="cta" href="#">Add to Chrome</a></p>
+  <p class="quiet">Free. No account. Nothing to configure.</p>
+
+  <div class="demo">
+    Hello <span class="m">Vlad Morozov<i></i></span>, your statement is attached.
+    A copy went to <span class="m">v.morozov@fastmail.com<i></i></span> and we
+    will call <span class="m">+7 916 402 55 18<i></i></span> if anything needs
+    your attention.
+  </div>
+  <p class="quiet">Press any mask to look under it. The original never leaves the page.</p>
+
+  <h2>Everything happens on your device</h2>
+  <p>
+    This is the part that matters. Nixel does not send the pages you visit
+    anywhere, because there is nowhere to send them — there is no server behind
+    this product. Detection runs inside your browser, in your own machine's memory.
+  </p>
+  <p>
+    That is not a promise about how carefully we handle your data. It is a
+    statement that we never receive it.
+  </p>
+
+  <h2>What it finds</h2>
+  <ul>
+    <li>API keys, access tokens and AWS credentials</li>
+    <li>Card numbers, verified against a checksum and an issuer prefix</li>
+    <li>Email addresses and phone numbers</li>
+    <li>Internal hostnames and private IP addresses</li>
+    <li>People's names, addresses and organisations — using a language model that
+        also runs on your device</li>
+  </ul>
+  <p class="quiet">
+    The popup tells you what it found, and one tap stops it hiding any kind you
+    don't care about.
+  </p>
+
+  <h2>Also does screenshots</h2>
+  <p>
+    Capture the visible page and Nixel opens an editor with every finding already
+    covered. Toggle any of them, pick how a mask looks, then copy or save a PNG
+    that is safe to send.
+  </p>
+
+  <hr />
+
+  <h2 id="privacy">Privacy policy</h2>
+  <p class="quiet">Last updated: 20 August 2026</p>
+
+  <p>
+    Nixel is a browser extension published by <b>SD Software LLC</b> (Armenia).
+    This policy describes exactly what the extension does with data. It is short
+    because the extension does very little.
+  </p>
+
+  <h3>What we collect</h3>
+  <p><b>Nothing.</b> We operate no servers and receive no data from the extension.
+  We cannot see the pages you visit, what Nixel found on them, or that you use it
+  at all. There is no analytics, no telemetry and no crash reporting.</p>
+
+  <h3>What stays on your device</h3>
+  <ul>
+    <li><b>Page content.</b> Read in your browser to find sensitive text, and
+      never transmitted. It is not written to disk or kept after the page closes.</li>
+    <li><b>Your settings.</b> Which kinds to hide, how masks look, which sites are
+      switched off. Stored locally by your browser.</li>
+    <li><b>Screenshots.</b> A capture is held in your browser's temporary storage
+      only while the editor is open, and is deleted when you close it.</li>
+  </ul>
+
+  <h3>Network requests the extension makes</h3>
+  <p>Two, and only these:</p>
+  <div class="card">
+    <b>Downloading the detection model — once</b>
+    <span>
+      The optional on-device language model (about 100 MB) is downloaded from the
+      Hugging Face CDN the first time you enable it, then cached and used offline.
+      This request contains no information about you or the pages you visit. You
+      can decline it, remove the model at any time, and the rest of the extension
+      keeps working.
+    </span>
+  </div>
+  <div class="card">
+    <b>Checking a Pro licence — if you buy one</b>
+    <span>
+      Paid users' extensions periodically confirm a licence key with our payment
+      provider. The request contains the licence key and a device label. It never
+      contains page content, and free users' extensions never make it.
+    </span>
+  </div>
+
+  <h3>Permissions, and why</h3>
+  <ul>
+    <li><b>activeTab / scripting</b> — to read and mask the page you are looking at.</li>
+    <li><b>storage</b> — to remember your settings.</li>
+    <li><b>offscreen</b> — to run the detection model without slowing the page down.</li>
+  </ul>
+
+  <h3>Payments</h3>
+  <p>
+    If you buy Pro, the transaction is handled by our payment provider, who acts
+    as merchant of record and collects the billing details needed to process it
+    under their own privacy policy. We never see or store your card details.
+  </p>
+
+  <h3>Children</h3>
+  <p>Nixel is not directed at children and collects no data from anyone.</p>
+
+  <h3>Changes and contact</h3>
+  <p>
+    If this policy changes, the date above changes with it. Questions, or a
+    request about your data:
+    <a href="mailto:hello@nixel.org">hello@nixel.org</a>.
+  </p>
+
+  <footer>
+    Nixel is made by SD Software LLC, Armenia.<br />
+    <a href="#privacy">Privacy</a> · <a href="mailto:hello@nixel.org">Contact</a>
+  </footer>
+
+</div>
+</body>
+</html>
