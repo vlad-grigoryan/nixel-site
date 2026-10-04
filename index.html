@@ -30,7 +30,6 @@
        margin:28px 0 16px; text-wrap:balance; }
   .lede { font-size:18px; color:var(--muted); margin:0 0 32px; text-wrap:pretty; }
   h2 { font-size:20px; font-weight:600; letter-spacing:-.018em; margin:52px 0 14px; }
-  h3 { font-size:15px; font-weight:600; margin:26px 0 6px; }
   p, li { font-size:15.5px; }
   ul { padding-left:20px; }
   li { margin:6px 0; }
@@ -47,16 +46,9 @@
   .m { position:relative; display:inline-block; }
   .m i { position:absolute; left:0; right:0; top:50%; height:1.35em;
          transform:translateY(-50%); border-radius:4px; background:var(--mask); }
-  .card {
-    border:1px solid var(--hair); border-radius:16px; padding:20px 22px; margin:16px 0;
-    background:var(--card);
-  }
-  .card b { display:block; font-size:15px; font-weight:600; margin-bottom:2px; }
-  .card span { font-size:14.5px; color:var(--muted); }
   footer { margin:72px 0 56px; padding-top:24px; border-top:1px solid var(--hair);
            font-size:14px; color:var(--muted); }
   footer a { color:var(--muted); }
-  hr { border:0; border-top:1px solid var(--hair); margin:52px 0; }
 </style>
 </head>
 <body>
@@ -128,80 +120,9 @@
     safe to paste into Slack, a ticket or a reply.
   </p>
 
-  <hr />
-
-  <h2 id="privacy">Privacy policy</h2>
-  <p class="quiet">Last updated: 20 August 2026</p>
-
-  <p>
-    Nixel is a browser extension published by <b>SD Software LLC</b> (Armenia).
-    This policy describes exactly what the extension does with data.
-  </p>
-
-  <h3>What we collect</h3>
-  <p><b>Nothing.</b> We operate no servers and receive no data from the extension.
-  We cannot see the pages you visit, what Nixel found on them, or that you use it
-  at all. There is no analytics, no telemetry and no crash reporting.</p>
-
-  <h3>What stays on your device</h3>
-  <ul>
-    <li><b>Page content.</b> Read in your browser to find sensitive text, and
-      never transmitted. It is not written to disk or kept after the page closes.</li>
-    <li><b>Your settings.</b> Which kinds to hide, how masks look, which sites are
-      switched off. Stored locally by your browser.</li>
-    <li><b>Screenshots.</b> A capture passes through your browser's temporary
-      storage on its way to the editor and is deleted the moment the editor has
-      it. Nothing is uploaded, and the redacted PNG is saved only where you
-      put it.</li>
-  </ul>
-
-  <h3>Network requests the extension makes</h3>
-  <p>Two, and only these:</p>
-  <div class="card">
-    <b>Downloading the detection model, once</b>
-    <span>
-      The optional on-device language model (about 100 MB) is downloaded from the
-      Hugging Face CDN the first time you enable it, then cached and used offline.
-      This request contains no information about you or the pages you visit. You
-      can decline it, remove the model at any time, and the rest of the extension
-      keeps working.
-    </span>
-  </div>
-
-  <div class="card">
-    <b>Checking your licence, once a week</b>
-    <span>
-      Once you buy a licence, the extension confirms it with Lemon Squeezy, our
-      payment provider, about once a week. The request contains the licence key
-      and a device label such as "Nixel on Mac". It never contains page content,
-      and the extension keeps working for a month if the check cannot be made.
-    </span>
-  </div>
-
-  <h3>Permissions, and why</h3>
-  <p>
-    Chrome will warn you that Nixel can read and change your data on all
-    websites. That is accurate, and unavoidable: an extension cannot find a
-    leaked key on a page without reading the page. What it does with that access
-    is the whole of this policy. Reading happens in your browser and stops there.
-  </p>
-  <ul>
-    <li><b>Access to the pages you open</b>: to find sensitive text and cover it.</li>
-    <li><b>activeTab / scripting</b>: to read and mask the page you are looking at.</li>
-    <li><b>storage</b>: to remember your settings.</li>
-    <li><b>offscreen</b>: to run the detection model without slowing the page down.</li>
-  </ul>
-
-  <h3>Changes and contact</h3>
-  <p>
-    If this policy changes, the date above changes with it. Questions, or a
-    request about your data:
-    <a href="mailto:support@nixel.org">support@nixel.org</a>.
-  </p>
-
   <footer>
     Nixel is made by SD Software LLC, Armenia.<br />
-    <a href="/pro">Pro</a> · <a href="#privacy">Privacy</a> · <a href="mailto:support@nixel.org">Contact</a>
+    <a href="/pro">Pricing</a> · <a href="/privacy">Privacy</a> · <a href="mailto:support@nixel.org">Contact</a>
   </footer>
 
 </div>

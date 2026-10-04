@@ -4,18 +4,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Nixel privacy policy</title>
-<meta name="description" content="Nixel collects nothing. Detection runs on your device and page content is never transmitted." />
+<meta name="description" content="The Nixel extension collects nothing. Detection runs on your device and page content is never transmitted." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' rx='229' fill='%232ED88A'/%3E%3Crect x='256' y='446' width='512' height='133' rx='66' fill='%23FCFDFD'/%3E%3C/svg%3E" />
 <style>
   :root {
     color-scheme: light dark;
-    --page:#fdfdfe; --card:#fff; --inset:#f7f8f8; --text:#34373d; --muted:#7c8189;
-    --hair:#e8e9eb; --green:#22c782; --mask:#3a3d44;
+    --page:#fdfdfe; --card:#fff; --text:#34373d; --muted:#7c8189; --hair:#e8e9eb;
     --font:-apple-system,"SF Pro Text",system-ui,"Helvetica Neue",Helvetica,sans-serif;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --page:#1b1d21; --card:#22252a; --inset:#1b1e22; --text:#e9eaec;
-            --muted:#9a9ea5; --hair:#383c42; --green:#2ed88a; --mask:#d9dbde; }
+    :root { --page:#1b1d21; --card:#22252a; --text:#e9eaec; --muted:#9a9ea5; --hair:#383c42; }
   }
   * { box-sizing: border-box; }
   body {
@@ -26,27 +24,15 @@
   header { padding:72px 0 8px; display:flex; align-items:center; gap:12px; }
   header svg { width:38px; height:38px; display:block; }
   header b { font-size:20px; font-weight:600; letter-spacing:-.018em; }
+  header a { margin-left:auto; font-size:14.5px; color:var(--muted); text-decoration:none; }
   h1 { font-size:38px; line-height:1.15; font-weight:600; letter-spacing:-.028em;
        margin:28px 0 16px; text-wrap:balance; }
-  .lede { font-size:18px; color:var(--muted); margin:0 0 32px; text-wrap:pretty; }
-  h2 { font-size:20px; font-weight:600; letter-spacing:-.018em; margin:52px 0 14px; }
   h3 { font-size:15px; font-weight:600; margin:26px 0 6px; }
   p, li { font-size:15.5px; }
   ul { padding-left:20px; }
   li { margin:6px 0; }
   a { color:var(--text); text-underline-offset:3px; }
-  .cta {
-    display:inline-block; padding:13px 24px; border-radius:999px; background:var(--green);
-    color:#fff; font-weight:600; font-size:15px; text-decoration:none;
-  }
   .quiet { font-size:14px; color:var(--muted); }
-  .demo {
-    padding:20px 22px; border-radius:16px; background:var(--inset); font-size:15.5px;
-    line-height:2.1; margin:8px 0 4px;
-  }
-  .m { position:relative; display:inline-block; }
-  .m i { position:absolute; left:0; right:0; top:50%; height:1.35em;
-         transform:translateY(-50%); border-radius:4px; background:var(--mask); }
   .card {
     border:1px solid var(--hair); border-radius:16px; padding:20px 22px; margin:16px 0;
     background:var(--card);
@@ -56,7 +42,6 @@
   footer { margin:72px 0 56px; padding-top:24px; border-top:1px solid var(--hair);
            font-size:14px; color:var(--muted); }
   footer a { color:var(--muted); }
-  hr { border:0; border-top:1px solid var(--hair); margin:52px 0; }
 </style>
 </head>
 <body>
@@ -70,18 +55,23 @@
     <a href="/">Back to Nixel</a>
   </header>
 
-<h1>Privacy policy</h1>
-  <p class="quiet">Last updated: 20 August 2026</p>
+  <h1>Privacy policy</h1>
+  <p class="quiet">Last updated: 4 October 2026</p>
 
   <p>
-    Nixel is a browser extension published by <b>SD Software LLC</b> (Armenia).
-    This policy describes exactly what the extension does with data.
+    Nixel is a browser extension published by <b>SD Software LLC</b>, 3 Getapnya
+    Street, Goris, Armenia ("we"). We are the controller of the personal data
+    described here. This policy describes exactly what the extension does with
+    data, and what we receive when you buy a licence or write to us.
   </p>
 
   <h3>What we collect</h3>
-  <p><b>Nothing.</b> We operate no servers and receive no data from the extension.
-  We cannot see the pages you visit, what Nixel found on them, or that you use it
-  at all. There is no analytics, no telemetry and no crash reporting.</p>
+  <p><b>From the extension, nothing.</b> We operate no servers and receive no data
+  from the extension. We cannot see the pages you visit, what Nixel found on them,
+  or that you use it at all. There is no analytics, no telemetry and no crash
+  reporting.</p>
+  <p>If you buy a licence or email us, we do receive a few details about you.
+  <a href="#buying">Buying a licence</a> below says which.</p>
 
   <h3>What stays on your device</h3>
   <ul>
@@ -102,9 +92,9 @@
     <span>
       The optional on-device language model (about 100 MB) is downloaded from the
       Hugging Face CDN the first time you enable it, then cached and used offline.
-      This request contains no information about you or the pages you visit. You
-      can decline it, remove the model at any time, and the rest of the extension
-      keeps working.
+      It carries nothing about you or the pages you visit, though like any
+      download it shows Hugging Face your IP address. You can decline it, remove
+      the model at any time, and the rest of the extension keeps working.
     </span>
   </div>
 
@@ -113,8 +103,9 @@
     <span>
       Once you buy a licence, the extension confirms it with Lemon Squeezy, our
       payment provider, about once a week. The request contains the licence key
-      and a device label such as "Nixel on Mac". It never contains page content,
-      and the extension keeps working for a month if the check cannot be made.
+      and a device label such as "Nixel on Mac", and like any request it shows
+      Lemon Squeezy your IP address. It never contains page content, and the
+      extension keeps working for a month if the check cannot be made.
     </span>
   </div>
 
@@ -130,7 +121,73 @@
     <li><b>activeTab / scripting</b>: to read and mask the page you are looking at.</li>
     <li><b>storage</b>: to remember your settings.</li>
     <li><b>offscreen</b>: to run the detection model without slowing the page down.</li>
+    <li><b>alarms</b>: to schedule the weekly licence check.</li>
+    <li><b>Access to api.lemonsqueezy.com</b>: to make that licence check, and nothing else.</li>
   </ul>
+
+  <h3 id="buying">Buying a licence</h3>
+  <p>
+    Licences are sold by Lemon Squeezy, who act as merchant of record: they take
+    the payment, handle tax and email you the licence key. To do that they collect
+    your name, email address, billing country and payment details, under
+    <a href="https://www.lemonsqueezy.com/privacy">their own privacy policy</a>.
+    We never see or store your card details.
+  </p>
+  <p>
+    Lemon Squeezy shares with us what an order needs: your name, email address,
+    country and the order itself. We use them to deliver and support your licence
+    and to keep the records tax law requires. If you email us, we keep the
+    conversation so we can answer you.
+  </p>
+
+  <h3>Why we use it, and for how long</h3>
+  <ul>
+    <li><b>Delivering and supporting your licence</b>, including the weekly
+      check: needed to perform our contract with you. Kept while your licence
+      is active.</li>
+    <li><b>Order records</b>: a legal obligation. The Armenian Tax Code requires
+      us to keep them for five years from the reporting period they belong to.
+      They are deleted after that.</li>
+    <li><b>Your emails to us</b>: our legitimate interest in answering you, or
+      our contract if they are about your licence. Deleted two years after the
+      last message.</li>
+    <li><b>Your licence key on your device</b>: stays in your browser until you
+      release the licence or remove the extension.</li>
+  </ul>
+  <p>We do not sell your data, use it for advertising, or make automated
+  decisions about you.</p>
+
+  <h3>Where your data is stored</h3>
+  <p>
+    We are based in Armenia, and Lemon Squeezy, GitHub and Hugging Face are in
+    the United States. Neither country is one the EU or UK treats as offering
+    equivalent protection by default, so when your data leaves the EU or UK it
+    relies on the safeguards those providers maintain, such as the EU-US Data
+    Privacy Framework or Standard Contractual Clauses. The order details that
+    reach us in Armenia are handled as this policy describes, wherever you live.
+  </p>
+
+  <h3>This website</h3>
+  <p>
+    nixel.org is hosted on GitHub Pages. It sets no cookies and runs no analytics
+    or scripts. Like any web host, GitHub receives your IP address when you load
+    a page and handles it under its own privacy statement.
+  </p>
+
+  <h3>Your rights</h3>
+  <p>
+    If you are in the EU, the UK or another country with similar law, you can
+    ask us for a copy of your data, to correct or delete it, to restrict or
+    object to how we use it, or to receive it in a portable format. Write to
+    <a href="mailto:support@nixel.org">support@nixel.org</a> and we will answer
+    within a month. Records tax law makes us keep cannot be deleted before that
+    period ends.
+  </p>
+  <p>
+    You can also complain to the data protection authority where you live, or
+    in the UK to the Information Commissioner's Office
+    (<a href="https://ico.org.uk">ico.org.uk</a>).
+  </p>
 
   <h3>Changes and contact</h3>
   <p>
@@ -139,7 +196,6 @@
     <a href="mailto:support@nixel.org">support@nixel.org</a>.
   </p>
 
-  
   <footer>
     Nixel is made by SD Software LLC, Armenia.<br />
     <a href="/">Home</a> · <a href="/pro">Pricing</a> · <a href="mailto:support@nixel.org">Contact</a>
