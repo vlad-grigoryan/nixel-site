@@ -43,9 +43,13 @@
     padding:20px 22px; border-radius:16px; background:var(--inset); font-size:15.5px;
     line-height:2.1; margin:8px 0 4px;
   }
-  .m { position:relative; display:inline-block; }
+  .m { position:relative; display:inline-block; cursor:pointer; border-radius:4px; }
   .m i { position:absolute; left:0; right:0; top:50%; height:1.35em;
-         transform:translateY(-50%); border-radius:4px; background:var(--mask); }
+         transform:translateY(-50%); border-radius:4px; background:var(--mask);
+         transition:opacity .18s; }
+  .m.open i { opacity:0; }
+  .m.open { box-shadow:0 1px 0 var(--green); }
+  .m:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
   footer { margin:72px 0 56px; padding-top:24px; border-top:1px solid var(--hair);
            font-size:14px; color:var(--muted); }
   footer a { color:var(--muted); }
@@ -126,5 +130,18 @@
   </footer>
 
 </div>
+<script>
+  // Press a mask to look under it, press again to cover it back up.
+  for (const m of document.querySelectorAll('.m')) {
+    m.tabIndex = 0;
+    m.setAttribute('role', 'button');
+    m.setAttribute('aria-pressed', 'false');
+    const flip = () => m.setAttribute('aria-pressed', m.classList.toggle('open'));
+    m.addEventListener('click', flip);
+    m.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
+    });
+  }
+</script>
 </body>
 </html>
