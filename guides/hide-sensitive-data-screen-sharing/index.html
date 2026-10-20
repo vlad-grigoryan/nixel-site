@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to hide sensitive data before screen sharing | Nixel</title>
+  <meta name="description" content="Prepare a browser demo without exposing API keys, emails or customer details. A practical screen sharing checklist, with a Nixel walkthrough and its limits." />
+  <link rel="canonical" href="https://nixel.org/guides/hide-sensitive-data-screen-sharing/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Nixel" />
+  <meta property="og:title" content="How to hide sensitive data before screen sharing" />
+  <meta property="og:description" content="A practical checklist for browser demos, recordings and screenshots, from the makers of Nixel." />
+  <meta property="og:url" content="https://nixel.org/guides/hide-sensitive-data-screen-sharing/" />
+  <meta property="og:image" content="https://nixel.org/assets/nixel-social.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header"><a class="brand" href="/" aria-label="Nixel home"><img src="/assets/favicon.svg" alt="" width="36" height="36" /><b>Nixel</b></a><nav aria-label="Main navigation"><a href="/#demo">Demo</a><a href="/pro">Pricing</a><a href="/privacy">Privacy</a></nav></header>
+    <main id="main" class="article">
+      <p class="eyebrow">The screen sharing checklist</p>
+      <h1>How to hide sensitive data before screen sharing</h1>
+      <p class="byline">By SD Software, makers of Nixel · 20 October 2026</p>
+      <p class="lede">The dashboard is ready. The call is starting. An email address in the sidebar and an API key in the settings are easy to overlook. A few minutes of preparation make the shared view much easier to check.</p>
+      <h2>Start with the smallest thing you need to show</h2>
+      <p>If a single browser tab is enough for the demo, share that tab. A full desktop share can also show notifications, other windows and files that have nothing to do with the call.</p>
+      <p>Use a demo account with fictional data when you can. Close unrelated tabs, dismiss notifications and visit each page you plan to open. If the demo needs a real account, look for details that belong to customers, colleagues or your own infrastructure.</p>
+      <h2>Check more than the big numbers</h2>
+      <ul>
+        <li><b>Credentials:</b> API keys, access tokens and connection details in settings, tables or code examples.</li>
+        <li><b>Contact details:</b> names, emails and phone numbers in account menus, activity feeds and support conversations.</li>
+        <li><b>Billing details:</b> card numbers, addresses and information shown on invoices.</li>
+        <li><b>Internal details:</b> private IP addresses, hostnames and anything your audience doesn't need to see.</li>
+      </ul>
+      <p>This is also a useful time to close a page entirely if it contains information that doesn't belong in the demo.</p>
+      <h2>Cover sensitive text in Chrome with Nixel</h2>
+      <p>We built <a href="/">Nixel</a> for this part of the workflow. It detects supported sensitive text on Chrome pages and places masks over it. Here's how to use it before a call or recording:</p>
+      <ol>
+        <li><b>Install and pin the extension.</b> Get Nixel from the <a href="https://chromewebstore.google.com/detail/nixel/mhdpmmbcnoakhpaemgpnomjpgklbdapk">Chrome Web Store</a>, then open the page you plan to show.</li>
+        <li><b>Review the detections.</b> Open Nixel from Chrome's toolbar. Check which categories it found and switch off categories that would hide information you need to discuss.</li>
+        <li><b>Enable name detection if you need it.</b> Names, addresses and organisations use an optional local language model. Allow time for the first download, about 100 MB, before the meeting.</li>
+        <li><b>Choose a mask style.</b> Blur, pixels, solid bars and labels change how covered text looks. For sensitive text in a recording or screenshot, use opaque bars or labels and inspect the result closely.</li>
+        <li><b>Check the shared view.</b> Start a private test recording or use the preview in your sharing tool. Open menus and move through the pages you'll show. Make sure the masks and the rest of the page appear as expected.</li>
+      </ol>
+      <p><a href="/#demo">Watch the 35-second demo</a> to see the actual extension, mask controls and screenshot editor.</p>
+      <div class="callout"><p><b>Keep a final review in the process.</b> Automatic detection can miss things. Nixel works with supported page text and doesn't cover other apps or your entire desktop. Don't rely on it to detect sensitive text inside images, videos or browser controls.</p></div>
+      <h2>If you're sending a screenshot</h2>
+      <p>Use Nixel's screenshot capture to open the page in its editor with detected items covered. Review the masks, turn individual findings on or off as needed and choose a mask style before copying or saving the PNG.</p>
+      <p>Open the exported image once more before attaching it. Check the corners, headers, sidebars and any text the detector didn't identify. If something sensitive is still visible, fix the image or leave it out.</p>
+      <h2>What stays local</h2>
+      <p>Nixel processes page content inside your browser. It doesn't send that content to us or to an AI service. The optional language model is downloaded once and then runs locally. Paid licence checks go to Lemon Squeezy without page content. The <a href="/privacy">privacy policy</a> explains those requests.</p>
+      <h2>Before you press Share</h2>
+      <ul class="checklist">
+        <li>The selected tab or window is the one you meant to show.</li>
+        <li>Unrelated tabs, windows and notifications are out of view.</li>
+        <li>Credentials and personal details are covered or removed.</li>
+        <li>You checked the pages and menus you plan to open.</li>
+        <li>A test recording or preview shows the result you expected.</li>
+      </ul>
+      <p>Nixel has a 7-day trial with no payment card required. After that, a licence is <a href="/pro">$29 a year for 3 installs</a>.</p>
+      <a class="cta" href="https://chromewebstore.google.com/detail/nixel/mhdpmmbcnoakhpaemgpnomjpgklbdapk">Try Nixel for Chrome <span aria-hidden="true">↗</span></a>
+    </main>
+    <footer><p>Nixel is made by SD Software LLC, Armenia.</p><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/pro">Pricing</a><a href="/privacy">Privacy</a><a href="mailto:support@nixel.org">Contact</a></nav></footer>
+  </div>
+</body>
+</html>

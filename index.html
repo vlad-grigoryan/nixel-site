@@ -1,148 +1,82 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nixel: hide what shouldn't be shared</title>
-<meta name="description" content="Nixel finds API keys, card numbers and personal details on any page and hides them before you share your screen. Everything runs on your own device." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Crect width='1024' height='1024' rx='229' fill='%232ED88A'/%3E%3Crect x='256' y='446' width='512' height='133' rx='66' fill='%23FCFDFD'/%3E%3C/svg%3E" />
-<style>
-  :root {
-    color-scheme: light dark;
-    --page:#fdfdfe; --card:#fff; --inset:#f7f8f8; --text:#34373d; --muted:#6b7078;
-    --hair:#e8e9eb; --green:#22c782; --mask:#3a3d44;
-    --font:-apple-system,"SF Pro Text",system-ui,"Helvetica Neue",Helvetica,sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --page:#1b1d21; --card:#22252a; --inset:#1b1e22; --text:#e9eaec;
-            --muted:#9a9ea5; --hair:#383c42; --green:#2ed88a; --mask:#d9dbde; }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin:0; background:var(--page); color:var(--text); font-family:var(--font);
-    -webkit-font-smoothing:antialiased; line-height:1.6;
-  }
-  .wrap { max-width:680px; margin:0 auto; padding:0 24px; }
-  header { padding:72px 0 8px; display:flex; align-items:center; gap:12px; }
-  header svg { width:38px; height:38px; display:block; }
-  header b { font-size:20px; font-weight:600; letter-spacing:-.018em; }
-  h1 { font-size:38px; line-height:1.15; font-weight:600; letter-spacing:-.028em;
-       margin:28px 0 16px; text-wrap:balance; }
-  .lede { font-size:18px; color:var(--muted); margin:0 0 32px; text-wrap:pretty; }
-  h2 { font-size:20px; font-weight:600; letter-spacing:-.018em; margin:52px 0 14px; }
-  p, li { font-size:15.5px; }
-  ul { padding-left:20px; }
-  li { margin:6px 0; }
-  a { color:var(--text); text-underline-offset:3px; }
-  .cta {
-    display:inline-block; padding:13px 24px; border-radius:999px; background:var(--green);
-    color:#07301d; font-weight:600; font-size:15px; text-decoration:none;
-  }
-  .quiet { font-size:14px; color:var(--muted); }
-  .demo {
-    padding:20px 22px; border-radius:16px; background:var(--inset); font-size:15.5px;
-    line-height:2.1; margin:8px 0 4px;
-  }
-  .m { position:relative; display:inline-block; cursor:pointer; border-radius:4px; }
-  .m i { position:absolute; left:0; right:0; top:50%; height:1.35em;
-         transform:translateY(-50%); border-radius:4px; background:var(--mask);
-         transition:opacity .18s; }
-  .m.open i { opacity:0; }
-  .m.open { box-shadow:0 1px 0 var(--green); }
-  .m:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
-  footer { margin:72px 0 56px; padding-top:24px; border-top:1px solid var(--hair);
-           font-size:14px; color:var(--muted); }
-  footer a { color:var(--muted); }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nixel: hide sensitive data before screen sharing</title>
+  <meta name="description" content="Hide API keys, emails and personal details in Chrome before screen sharing or taking screenshots. Nixel detects sensitive text locally. Try it free for 7 days." />
+  <link rel="canonical" href="https://nixel.org/" />
+  <meta name="theme-color" content="#fdfdfe" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nixel" />
+  <meta property="og:title" content="Hide what shouldn't be shared. Nixel for Chrome." />
+  <meta property="og:description" content="API keys, emails and personal details, covered before your next screen share. Detection happens on your device." />
+  <meta property="og:url" content="https://nixel.org/" />
+  <meta property="og:image" content="https://nixel.org/assets/nixel-social.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nixel for Chrome. Hide sensitive data before you share your screen." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body>
-<div class="wrap">
-
-  <header>
-    <svg viewBox="0 0 1024 1024" aria-hidden="true">
-      <rect width="1024" height="1024" rx="229" fill="#2ED88A"/>
-      <rect x="256" y="446" width="512" height="133" rx="66" fill="#FCFDFD"/>
-    </svg>
-    <b>Nixel</b>
-  </header>
-
-  <h1>Hide what shouldn't be shared, before you share it.</h1>
-  <p class="lede">
-    Nixel finds API keys, card numbers, emails and personal details on any page
-    and covers them up. Then you screen-share, screenshot or record
-    without thinking about it.
-  </p>
-
-  <p><a class="cta" href="#">Add to Chrome</a></p>
-  <p class="quiet">
-    Free for seven days, then <a href="/pro">$29 a year</a>. No card to start,
-    no account, nothing to configure.
-  </p>
-
-  <div class="demo">
-    Hello <span class="m">Helen Brandt<i></i></span>, your statement is attached.
-    A copy went to <span class="m">h.brandt@acme-labs.example<i></i></span> and we
-    will call <span class="m">+1 (415) 555-0137<i></i></span> if anything needs
-    your attention.
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Nixel home"><img src="/assets/favicon.svg" alt="" width="36" height="36" /><b>Nixel</b></a>
+      <nav aria-label="Main navigation"><a href="#demo">Demo</a><a href="/pro">Pricing</a><a href="/privacy">Privacy</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow"><span aria-hidden="true"></span> A little privacy before you press Share</p>
+        <h1 id="hero-title">Hide what shouldn't<br class="desktop-break" /> be shared.</h1>
+        <p class="lede">Your next demo doesn't need your API key in it. Nixel finds sensitive text in Chrome and covers it before you share your screen, record a walkthrough or send a screenshot.</p>
+        <div class="actions"><a class="cta" href="https://chromewebstore.google.com/detail/nixel/mhdpmmbcnoakhpaemgpnomjpgklbdapk">Add to Chrome <span aria-hidden="true">↗</span></a><a class="text-link" href="#demo">See it in 35 seconds <span aria-hidden="true">↓</span></a></div>
+        <p class="quiet">Free for 7 days. No card to start. Then <a href="/pro">$29 a year for 3 installs</a>.</p>
+      </section>
+      <figure class="video-demo" id="demo">
+        <div class="video-topline"><span>Nixel, on a sample dashboard</span><span>0:35 · No audio</span></div>
+        <video controls playsinline preload="metadata" poster="/assets/demo-poster.webp" width="1600" height="900" aria-label="Nixel demo: changing mask styles, toggling name detection and reviewing a screenshot" aria-describedby="demo-caption">
+          <source src="/assets/nixel-demo.mp4" type="video/mp4" />
+          <p><a href="/assets/nixel-demo.mp4">Watch or download the Nixel demo</a>.</p>
+        </video>
+        <figcaption id="demo-caption">A real recording of the extension, using fictional data. English captions are included in the video.</figcaption>
+      </figure>
+      <details class="transcript"><summary>Read the demo transcript</summary><p>Nixel hides sensitive data before you share your screen. Choose blur, pixels, solid bars or labels. Turn name masking off while keeping the other masks, then turn it back on. Open the screenshot editor and review the masks before saving or sharing.</p></details>
+      <section class="section" aria-labelledby="use-cases">
+        <div class="section-heading"><p class="eyebrow">The moments it's made for</p><h2 id="use-cases">You're showing the work.<br />The private details can stay private.</h2></div>
+        <div class="cards">
+          <article><span class="number" aria-hidden="true">01</span><h3>Sharing your screen</h3><p>Walk through a dashboard with a client or a teammate. Cover detected emails, phone numbers and credentials in the browser tab you're sharing.</p></article>
+          <article><span class="number" aria-hidden="true">02</span><h3>Recording a walkthrough</h3><p>Check the masks before you start recording. Choose blur, pixels, solid bars or labels to suit the page you're showing.</p></article>
+          <article><span class="number" aria-hidden="true">03</span><h3>Sending a screenshot</h3><p>Capture the page, review the detected items in Nixel's screenshot editor, then copy or save a PNG for your ticket, message or reply.</p></article>
+        </div>
+      </section>
+      <section class="section split" aria-labelledby="detection">
+        <div><p class="eyebrow">What gets covered</p><h2 id="detection">The small things<br />you might miss.</h2><p class="muted">Open the extension to see what it found. You can switch detection categories on or off and choose how the masks look.</p></div>
+        <ul class="detection-list">
+          <li><b>API keys and access tokens</b><span>Including common credential formats and AWS keys.</span></li>
+          <li><b>Card numbers</b><span>Checked against a checksum and issuer prefix.</span></li>
+          <li><b>Emails and phone numbers</b><span>Contact details in the page you're showing.</span></li>
+          <li><b>Private IPs and internal hostnames</b><span>Details that can slip into a technical demo.</span></li>
+          <li><b>Names, addresses and organisations</b><span>With the optional language model that runs on your device.</span></li>
+        </ul>
+      </section>
+      <section class="privacy-note" aria-labelledby="local-title">
+        <div class="local-icon" aria-hidden="true">↳</div>
+        <div><p class="eyebrow">It stays on your side of the screen</p><h2 id="local-title">Detection happens on your device.</h2><p>Page content is processed inside your browser and isn't sent to us or an AI service. The optional language model is a one-time download of about 100 MB. Once downloaded, it runs locally too.</p><p class="quiet">Licence checks go to Lemon Squeezy and don't include page content. <a href="/privacy">Read the privacy policy</a>.</p></div>
+      </section>
+      <section class="section faq" aria-labelledby="questions">
+        <p class="eyebrow">Before you install</p><h2 id="questions">A few useful details.</h2>
+        <details><summary>Does it work with Zoom, Google Meet or Loom?</summary><p>Nixel masks text in Chrome pages. Those masks can appear when you share or record that browser tab with your meeting or recording tool. Nixel doesn't mask other apps, browser controls or your whole desktop. Check the shared view before starting.</p></details>
+        <details><summary>Do I need to download the language model?</summary><p>No. Pattern-based detection covers supported credentials, card numbers, emails, phone numbers and network details without it. Enable the optional local model if you also want to detect names, addresses and organisations.</p></details>
+        <details><summary>Will it catch everything?</summary><p>Detection can miss sensitive details or hide text you wanted to show. Nixel works with supported text on web pages; don't rely on it to find text inside images or videos. Review your page and any exported screenshot before sharing.</p></details>
+        <details><summary>What happens after the free trial?</summary><p>The trial lasts 7 days and needs no payment card. A licence costs $29 a year and covers 3 installs. <a href="/pro">See pricing and licence details</a>.</p></details>
+      </section>
+      <aside class="guide-link"><div><p class="eyebrow">A practical starting point</p><h2><a href="/guides/hide-sensitive-data-screen-sharing/">How to hide sensitive data before screen sharing <span aria-hidden="true">↗</span></a></h2><p>A short checklist for preparing a browser demo, choosing masks and checking what your audience will see.</p></div></aside>
+      <section class="closing" aria-labelledby="try-title"><h2 id="try-title">One less thing in your next demo.</h2><p>Try Nixel on the pages you actually use.</p><a class="cta" href="https://chromewebstore.google.com/detail/nixel/mhdpmmbcnoakhpaemgpnomjpgklbdapk">Try Nixel for Chrome <span aria-hidden="true">↗</span></a><p class="quiet">7 days free. No card to start.</p></section>
+    </main>
+    <footer><p>Nixel is made by SD Software LLC, Armenia.</p><nav aria-label="Footer navigation"><a href="/pro">Pricing</a><a href="/privacy">Privacy</a><a href="/guides/hide-sensitive-data-screen-sharing/">Screen sharing guide</a><a href="mailto:support@nixel.org">Contact</a></nav></footer>
   </div>
-  <p class="quiet">Press any mask to look under it. The original never leaves the page.</p>
-
-  <h2>Everything happens on your device</h2>
-  <p>
-    Nixel does not send the pages you visit anywhere, because there is nowhere
-    to send them: we run no servers. Detection runs inside your browser, in your
-    own machine's memory.
-  </p>
-  <p>
-    That is not a promise about how carefully we handle your pages. It is a
-    statement that we never receive them.
-  </p>
-
-  <h2>What it finds</h2>
-  <ul>
-    <li>API keys, access tokens and AWS credentials</li>
-    <li>Card numbers, verified against a checksum and an issuer prefix</li>
-    <li>Email addresses and phone numbers</li>
-    <li>Internal hostnames and private IP addresses</li>
-    <li>People's names, addresses and organisations, found by a language model that
-        also runs on your device</li>
-  </ul>
-  <p class="quiet">
-    The popup tells you what it found, and one tap stops it hiding any kind you
-    don't care about.
-  </p>
-
-  <h2>The screenshot you were about to send</h2>
-  <p>
-    Right now you crop it, or you smudge it in Preview, or you look at it twice
-    and send it anyway. All three depend on you spotting the thing you are trying
-    not to send.
-  </p>
-  <p>
-    Nixel captures the page and opens an editor with every finding already
-    covered. You review what it caught rather than hunt for what you missed.
-    Toggle any of them, pick how a mask looks, then copy or save a PNG that is
-    safe to paste into Slack, a ticket or a reply.
-  </p>
-
-  <footer>
-    Nixel is made by SD Software LLC, Armenia.<br />
-    <a href="/pro">Pricing</a> · <a href="/privacy">Privacy</a> · <a href="mailto:support@nixel.org">Contact</a>
-  </footer>
-
-</div>
-<script>
-  // Press a mask to look under it, press again to cover it back up.
-  for (const m of document.querySelectorAll('.m')) {
-    m.tabIndex = 0;
-    m.setAttribute('role', 'button');
-    m.setAttribute('aria-pressed', 'false');
-    const flip = () => m.setAttribute('aria-pressed', m.classList.toggle('open'));
-    m.addEventListener('click', flip);
-    m.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); }
-    });
-  }
-</script>
 </body>
 </html>
