@@ -127,3 +127,18 @@ footer nav { font-size:13px; gap:20px; }
   .brand b { font-size:18px; }
   .desktop-break { display:none; }
 }
+
+.article-figure { margin:30px 0; }
+.article-figure img { display:block; width:100%; height:auto; border:1px solid var(--hair); border-radius:10px; }
+.article-figure figcaption { line-height:1.7; }
+.article-figure>a:focus-visible { display:block; border-radius:10px; }
+.related-guides { border-top:1px solid var(--hair); margin-top:42px; padding-top:4px; }
+.article .related-guides h2 { margin-top:28px; font-size:22px; }
+.article .related-guides li,.article .related-guides p { font-size:15px; }
+.article-install { margin-top:40px; padding-top:20px; border-top:1px solid var(--hair); }
+.guide-index article { padding:28px 0; border-top:1px solid var(--hair); }
+.guide-index article:last-child { border-bottom:1px solid var(--hair); margin-bottom:28px; }
+.guide-index .eyebrow { margin:0 0 10px; font-size:12px; }
+.article .guide-index h2 { margin:0 0 12px; font-size:25px; }
+.article .guide-index p:last-child { margin-bottom:0; color:var(--muted); }
+.guide-browse { margin-top:24px; font-size:14px; }

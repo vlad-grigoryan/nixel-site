@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to hide API keys before recording a browser demo | Nixel</title>
+  <meta name="description" content="Hide supported API keys and tokens in Chrome before recording a demo. Follow a practical checklist, see a real Nixel example and review the final video." />
+  <link rel="canonical" href="https://nixel.org/guides/hide-api-keys-screen-recording/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Nixel" />
+  <meta property="og:title" content="How to hide API keys before recording a browser demo" />
+  <meta property="og:description" content="Hide supported API keys and tokens in Chrome before recording a demo. Follow a practical checklist, see a real Nixel example and review the final video." />
+  <meta property="og:url" content="https://nixel.org/guides/hide-api-keys-screen-recording/" />
+  <meta property="og:image" content="https://nixel.org/assets/nixel-before-after.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to hide API keys before recording a browser demo", "description": "Hide supported API keys and tokens in Chrome before recording a demo. Follow a practical checklist, see a real Nixel example and review the final video.", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "author": {"@type": "Organization", "name": "SD Software LLC", "url": "https://nixel.org/"}, "publisher": {"@type": "Organization", "name": "SD Software LLC", "url": "https://nixel.org/"}, "mainEntityOfPage": "https://nixel.org/guides/hide-api-keys-screen-recording/", "image": "https://nixel.org/assets/nixel-before-after.png"}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header"><a class="brand" href="/" aria-label="Nixel home"><img src="/assets/favicon.svg" alt="" width="36" height="36" /><b>Nixel</b></a><nav aria-label="Main navigation"><a href="/guides/">Guides</a><a href="/pro">Pricing</a><a href="/privacy">Privacy</a></nav></header>
+    <main id="main" class="article">
+      <p class="eyebrow">Recording a browser demo</p>
+      <h1>How to hide API keys before recording a browser demo</h1>
+      <p class="byline">By SD Software, makers of Nixel · 20 October 2026</p>
+      <p class="lede">For a browser demo, start with fictional data where you can, cover the credentials you still need to keep on the page, and inspect a short test recording. Nixel helps with supported sensitive text in Chrome before the recording starts.</p>
+      <figure class="article-figure"><a href="/assets/nixel-before-after.png" target="_blank" rel="noopener"><img src="/assets/nixel-before-after.png" width="1280" height="800" alt="Before and after: Nixel covers fictional API keys, email addresses and private IPs on a sample dashboard" fetchpriority="high" /></a><figcaption>Our sample dashboard before and after Nixel. All data is fictional. <a href="/assets/nixel-before-after.png" target="_blank" rel="noopener">Open the image at full size</a>.</figcaption></figure>
+      <h2>Prepare the account you plan to show</h2>
+      <p>A walkthrough of an integration often ends up on its settings page. That's where a secret key, a deploy key or a session token can sit beside the feature you meant to explain.</p>
+      <p>Use a separate demo account with made-up values when the walkthrough allows it. If you only need to explain the shape of a request, use a clearly fictional placeholder instead of a working credential. Keep a real secret out of the demo whenever you can.</p>
+      <p>Write down the pages you will open. Check the settings screen, any expanded details and the places you return to between steps. A clean first screen doesn't tell you what will appear later.</p>
+      <h2>Cover supported keys on the Chrome page</h2>
+      <p>We make Nixel, a Chrome extension that detects supported credentials and other sensitive text locally. This is the workflow we use for browser demonstrations:</p>
+      <ol>
+        <li><b>Open the page and check Nixel.</b> Install it from the <a href="https://chromewebstore.google.com/detail/nixel/mhdpmmbcnoakhpaemgpnomjpgklbdapk">Chrome Web Store</a>, open your demo page and inspect the extension's findings before recording.</li>
+        <li><b>Keep credential detection on.</b> Check the API keys and token findings. Nixel recognises supported formats, including common API credentials and AWS keys. An unfamiliar token can be missed, so inspect every value you know is sensitive.</li>
+        <li><b>Choose solid bars or labels.</b> Nixel also offers blur and pixels. For a secret you need to conceal in a recording, use an opaque style and check that it covers the complete value.</li>
+        <li><b>Visit each planned screen.</b> Open the menus and details you need for the walkthrough. Wait for the page and its masks to settle before you start the take.</li>
+        <li><b>Make a short test recording.</b> Watch what the recorder actually captured. Check transitions as well as still frames, then record the full walkthrough.</li>
+      </ol>
+      <p>You can see the extension changing mask styles in our <a href="/#demo">35-second demo</a>. Credential pattern detection doesn't need the optional language model; that model adds detection for names, addresses and organisations.</p>
+      <h2>Keep the recording inside the prepared area</h2>
+      <p>Record the browser tab or window you need for the demo. Keep unrelated tabs, account menus and notifications out of the capture. If you switch to a terminal, a desktop editor or browser DevTools, check that view separately.</p>
+      <div class="callout"><p><b>Nixel covers supported text on Chrome pages.</b> It doesn't mask your whole desktop, other apps, browser controls or DevTools. Don't rely on it to detect secrets inside an image or video. Any view outside the prepared page needs its own check.</p></div>
+      <h2>Review the finished video before uploading it</h2>
+      <p>Watch the exported file from the beginning, including the moments when you change pages, open settings or stop recording. Pause where credentials could appear. If you find an exposed value, fix that section or record it again before sharing the video.</p>
+      <p>If you're sending a still image instead, follow the <a href="/guides/redact-personal-data-screenshots/">screenshot redaction workflow</a> and review the exported PNG.</p>
+      <h2>If a real key was already shared</h2>
+      <p>Covering a value in an edited video doesn't revoke the credential. Follow the provider's response steps for an exposed key. For example, <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/securing_access-keys.html">AWS recommends replacing access keys that may be compromised and deleting the previous keys</a>.</p>
+      <h2>A quick check before publishing</h2>
+      <ul class="checklist"><li>The demo uses fictional values wherever practical.</li><li>Every real credential on the prepared page is covered or removed.</li><li>Menus, transitions and any other apps were checked separately.</li><li>You watched the exported video, not only the recording preview.</li></ul>
+      <div class="article-install"><p>Try Nixel on the pages you actually use. The trial lasts 7 days and needs no payment card. After that, a licence is <a href="/pro">$29 a year for 3 installs</a>.</p><a class="cta" href="https://chromewebstore.google.com/detail/nixel/mhdpmmbcnoakhpaemgpnomjpgklbdapk">Try Nixel for Chrome <span aria-hidden="true">↗</span></a></div>
+      <aside class="related-guides" aria-labelledby="related-title"><h2 id="related-title">Related guides</h2><ul><li><a href="/guides/hide-sensitive-data-screen-sharing/">How to hide sensitive data before screen sharing</a></li><li><a href="/guides/redact-personal-data-screenshots/">How to redact personal data in Chrome screenshots</a></li></ul><p><a href="/guides/">Browse all Nixel guides</a></p></aside>
+    </main>
+    <footer><p>Nixel is made by SD Software LLC, Armenia.</p><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/guides/">Guides</a><a href="/pro">Pricing</a><a href="/privacy">Privacy</a><a href="mailto:support@nixel.org">Contact</a></nav></footer>
+  </div>
+</body>
+</html>
